@@ -9,7 +9,7 @@ const app = express()
 
 // dotenv assets
 dotenv.config()
-const PORT = process.env.SERVER_PORT
+const PORT = process.env.SERVER_PORT || 5050
 
 // config express
 app.use(express.static("public"))
