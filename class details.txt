@@ -1,0 +1,9 @@
+Ejs                         => server site randering
+install ejs                 => nam i ejs
+set                         => in server file app.set("view engine", "ejs")
+default ejs files stay in   => views file
+if I want change PORT       => app.set("views", "appName")
+
+ejs language support        => vs code extention suggest ejs code
+install ejs layouts         => npm i express-ejs-layouts
+                            -> must create a file in views layouts.ejs
