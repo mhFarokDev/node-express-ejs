@@ -3,6 +3,15 @@ import express from "express"
 import colors from "colors"
 import pageRouter from "./routers/pageRouters.js"
 import expressEjsLayouts from "express-ejs-layouts"
+
+import path from "path";
+import { fileURLToPath } from "url";
+
+// Fix __dirname in ES Module
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+
 // init express
 const app = express()
 
@@ -27,7 +36,9 @@ app.use("/", pageRouter)
 
 
 // EJS init view engin
-app.set("view engine", "ejs")
+// Set Views Directory
+app.set("views", path.join(__dirname, "views"));
+app.set("view engine", "ejs");
 
 
 
